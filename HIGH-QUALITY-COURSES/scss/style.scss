@@ -1,0 +1,880 @@
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url(fonts/Montserrat/Montserrat-Light.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(fonts/Montserrat/Montserrat-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url(fonts/Montserrat/Montserrat-ExtraBold.ttf);
+  font-style: normal;
+  font-weight: 900;
+}
+
+@mixin flex_centr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin pink_parag_style {
+  font-family: Montserrat-Bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: 0.2px;
+  color: #ff6551;
+}
+
+@mixin section_parag_mixin {
+  font-family: Montserrat-Light;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.2px;
+}
+
+@mixin bold_grey_parag {
+  font-family: Montserrat-ExtraBold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+@mixin price_style {
+  font-family: Montserrat-Light;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.1px;
+}
+
+$leftMargin: 198px;
+$gradeFlexLeftMargin: 25px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+
+  .header_bgr {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    max-width: 1800px;
+    width: 100%;
+  }
+
+  .section_parag_header {
+    margin-top: 20px;
+    @include section_parag_mixin;
+    max-width: 222px;
+  }
+}
+
+.header_description_flex {
+  @include flex_centr;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.header_description_flex_box {
+  padding: 35px 40px;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+.description_flex_img {
+  width: 70px;
+}
+
+.header_hr {
+  width: 50px;
+  height: 2px;
+  border: none;
+  background: #e74040;
+}
+
+.pink_title_header {
+  @include pink_parag_style;
+  margin-left: $leftMargin;
+  margin-bottom: 35px;
+}
+
+.main_title {
+  font-family: Montserrat-Bold;
+  font-size: 58px;
+  line-height: 138%;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  max-width: 542px;
+  margin-left: $leftMargin;
+}
+
+.header_parag {
+  font-family: Montserrat-Light;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  color: #737373;
+  max-width: 338px;
+  margin-left: $leftMargin;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.header_btn {
+  margin-left: $leftMargin;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.get_quote_now_btn {
+  padding: 15px 40px;
+  background: #ff6551;
+  border-radius: 5px;
+  border: none;
+  font-family: Montserrat-Light;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 157%;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.learn_more_header_btn {
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+  background: #ffffff;
+  font-family: Montserrat-Light;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 157%;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ff6551;
+  border: 1px solid #ff6551;
+}
+.header_flex_main {
+  display: flex;
+  justify-content: flex-end;
+  gap: 460px;
+  align-items: baseline;
+  margin: 33px 200px 122px 200px;
+  flex-wrap: wrap;
+}
+
+.personal_area_enter {
+  display: flex;
+  gap: 45px;
+  position: relative;
+  z-index: 1;
+
+  .login_btn {
+    font-family: Montserrat-Light;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: right;
+    letter-spacing: 0.2px;
+    color: #ff6551;
+    background-color: #184c99;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+  }
+
+  .join_btn {
+    max-width: 137px;
+    height: 52px;
+    background: #ff6551;
+    border-radius: 5px;
+    font-family: Montserrat-Light;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    padding: 15px 25px;
+    border: none;
+  }
+}
+
+.navigation_list {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 21px;
+  list-style: none;
+}
+
+.list_elements {
+  font-family: Montserrat-Light;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #737373;
+  text-decoration: none;
+}
+
+.brandname {
+  font-family: Montserrat-ExtraBold;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.1px;
+  color: #252b42;
+  position: absolute;
+  left: 200px;
+  top: 10px;
+}
+
+.blue_square {
+  max-width: 112px;
+  height: 177px;
+}
+.nav_flex {
+  display: flex;
+  margin: 0 0 100px;
+  gap: 60px;
+}
+
+.get_quality_education {
+  @include flex_centr;
+  gap: 164px;
+  margin-top: 160px;
+
+  .girl_with_pen_img {
+    max-width: 507px;
+    width: 100%;
+  }
+
+  .section_title {
+    max-width: 243px;
+    color: #252b42;
+  }
+
+  .section_parag {
+    max-width: 351px;
+    color: #737373;
+    margin: 35px 0;
+  }
+
+  .pink_link {
+    text-decoration: none;
+  }
+}
+
+.practice_advice {
+  background-color: #26335d;
+
+  .section_title {
+    color: #ffffff;
+    padding: 10px 0;
+    margin-left: $leftMargin;
+  }
+
+  .section_parag {
+    max-width: 469px;
+    color: #ffffff;
+    margin-left: $leftMargin;
+  }
+
+  .practice_advice_flex {
+    @include flex_centr;
+    gap: 10px;
+    padding-top: 80px;
+    padding-bottom: 240px;
+  }
+
+  .search_courses_flex {
+    @include flex_centr;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+  }
+
+  .practice_advice_flex_title {
+    font-family: Montserrat-ExtraBold;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+    color: #252b42;
+    margin-left: $gradeFlexLeftMargin;
+  }
+
+  .practice_advice_flex_parag {
+    @include bold_grey_parag;
+    max-width: 280px;
+    padding: 10px 0 10px 0;
+    margin-left: $gradeFlexLeftMargin;
+  }
+
+  .flex_sale {
+    gap: 10px;
+    margin-left: $gradeFlexLeftMargin;
+    padding-bottom: 25px;
+    font-family: Montserrat-Light;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.2px;
+    color: #737373;
+  }
+
+  .flex_price {
+    margin-left: $gradeFlexLeftMargin;
+    gap: 5px;
+  }
+
+  .firs_price {
+    @include price_style;
+    color: #bdbdbd;
+  }
+
+  .second_price {
+    @include price_style;
+    color: #2435a1;
+  }
+  .flex_arrow {
+    border: 1px solid #ff6551;
+    border-radius: 40px;
+    width: 140px;
+    margin-left: 25px;
+  }
+
+  .pink_btn {
+    @include pink_parag_style;
+    padding: 10px;
+  }
+  .flex_arrow {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  .sale_link {
+    position: absolute;
+    width: 51px;
+    height: 24px;
+    left: 20px;
+    top: 20px;
+    background: #e74040;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    font-family: Montserrat-Light;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+  }
+
+  .grade_flex {
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    margin: 26px 25px 11px;
+  }
+}
+
+.watch_our_courses {
+  .section_title {
+    margin-left: $leftMargin;
+    padding: 10px 0;
+  }
+
+  .tariffs_flex {
+    @include flex_centr;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 109px;
+    margin-bottom: 198px;
+  }
+
+  .tariffs_block {
+    padding: 50px 40px;
+    position: relative;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+
+  .new_circle {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    right: -20px;
+    top: -30px;
+    background: #e77c40;
+    border-radius: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat-Light;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #ffffff;
+  }
+
+  .tariffs_title {
+    font-family: Montserrat-ExtraBold;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0.1px;
+    color: #252b42;
+    margin: 35px 0;
+  }
+
+  .tariffs_parag {
+    @include bold_grey_parag;
+    margin-bottom: 35px;
+  }
+
+  .price {
+    font-family: Montserrat-ExtraBold;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    letter-spacing: 0.2px;
+    color: #ff6551;
+    margin-bottom: 5px;
+  }
+
+  .price_per_term {
+    font-family: Montserrat-ExtraBold;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.2px;
+    color: #8ec2f2;
+    margin-bottom: 35px;
+  }
+
+  .section_parag_definition {
+    @include section_parag_mixin;
+    margin-bottom: 35px;
+  }
+
+  .try_btn {
+    width: 243px;
+    height: 52px;
+    background: #ff6551;
+    border-radius: 5px;
+    font-family: Montserrat-Light;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    border: none;
+    margin-bottom: 54px;
+  }
+
+  .tariffs_definition {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tariffs_check_mark {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .checked_tariffs {
+    font-family: Montserrat-ExtraBold;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.2px;
+    color: #252b42;
+    max-width: 201px;
+  }
+
+  .section_little_title {
+    margin-left: $leftMargin;
+  }
+}
+
+.approdable_packages {
+  .section_title {
+    margin-left: $leftMargin;
+    padding: 10px 0;
+  }
+
+  .section_parag {
+    margin-bottom: 100px;
+  }
+
+  .reviews_flex {
+    @include flex_centr;
+    gap: 10px;
+    margin-bottom: 130px;
+  }
+
+  .reviews_flex_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 100px 10px;
+  }
+
+  .reviews_flex_parag {
+    @include bold_grey_parag;
+    text-align: center;
+    max-width: 159px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .user_flex {
+    @include flex_centr;
+    gap: 15px;
+  }
+
+  .user_name {
+    @include pink_parag_style;
+  }
+
+  .user_profession {
+    font-family: Montserrat-Light;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    letter-spacing: 0.2px;
+    color: #252b42;
+  }
+}
+
+.news {
+  padding: 160px 0 180px;
+  text-align: center;
+
+  .newsletter_title {
+    @include pink_parag_style;
+    margin-bottom: 10px;
+  }
+  .newsletter_parag {
+    @include section_parag_mixin;
+    margin: 0 auto;
+    max-width: 469px;
+  }
+
+  .email {
+    background: #f9f9f9;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px 0px 0px 5px;
+    width: 700px;
+    height: 60px;
+    font-family: Montserrat-Light;
+    padding: 5px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+    letter-spacing: 0.2px;
+    color: #737373;
+  }
+
+  .subscribe_btn {
+    background: #ff6551;
+    border: 1px solid #e6e6e6;
+    border-radius: 0px 5px 5px 0px;
+    padding: 22px 23px;
+    font-family: Montserrat-Light;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+  }
+
+  .email_flex {
+    @include flex_centr;
+    gap: 0;
+
+    margin-top: 80px;
+  }
+}
+
+.footer_flex {
+  @include flex_centr;
+  margin-bottom: 50px;
+  gap: 90px;
+
+  .footer_flex_title {
+    font-family: Montserrat-Bold;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+    color: #252b42;
+    margin-bottom: 40px;
+  }
+
+  .footer_flex_links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  .footer_links {
+    font-family: Montserrat-Light;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.2px;
+    color: #737373;
+    text-decoration: none;
+  }
+
+  .contact_flex {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+  }
+}
+
+.media_flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 280px 25px 200px;
+  background: #fafafa;
+}
+
+.contact_style {
+  font-family: Montserrat-ExtraBold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: 0.2px;
+  color: #737373;
+  text-decoration: none;
+}
+
+.media_links {
+  @include flex_centr;
+  gap: 20px;
+}
+
+.section_parag_definition {
+  max-width: 204px;
+  gap: 30;
+}
+
+.flex_arrow {
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.arrow-next {
+  width: 10px;
+  height: 17px;
+}
+
+.section_title {
+  font-family: Montserrat-Bold;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  letter-spacing: 0.2px;
+}
+
+.section_parag {
+  @include section_parag_mixin;
+  margin-left: $leftMargin;
+  max-width: 469px;
+}
+
+.lable_enumeration {
+  @include flex_centr;
+  margin-top: 200px;
+  margin-bottom: 150px;
+  gap: 30px;
+}
+
+.pink_title {
+  @include pink_parag_style;
+  padding-top: 160px;
+  margin-left: $leftMargin;
+}
+
+.product_cover {
+  max-width: 341px;
+  width: 100%;
+}
+
+.pink_link {
+  @include pink_parag_style;
+}
+
+.white_background {
+  background-color: #ffffff;
+}
+
+.flex_start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.arrow_down {
+  width: 17px;
+  height: 16px;
+  padding-top: 2px;
+}
+
+.practice_advice_img {
+  position: relative;
+}
+
+.grade_img {
+  max-width: 51px;
+  height: 26px;
+}
+
+.section_little_title {
+  font-family: Montserrat-Bold;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.1px;
+  color: #252b42;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1500px) {
+  .header_flex_main {
+    gap: 250px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .header_flex_main {
+    gap: 200px;
+    margin: 33px 100px 122px 70px;
+  }
+}
+
+@media screen and (max-width: 1194px) {
+  .brandname {
+    display: none;
+  }
+  .pink_title_header {
+    margin-left: 100px;
+  }
+
+  .main_title {
+    margin-left: 100px;
+  }
+
+  .header_parag {
+    margin-left: 100px;
+  }
+
+  .header_btn {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .header_bgr {
+    display: none;
+  }
+
+  .header_flex_main {
+    gap: 40px;
+    margin: 33px 30px 122px 30px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .practice_advice {
+    .section_title {
+      margin-left: 100px;
+    }
+    .section_parag {
+      margin-left: 100px;
+    }
+
+    .pink_title {
+      margin-left: 100px;
+    }
+  }
+
+  .watch_our_courses {
+    .section_little_title {
+      margin-left: 100px;
+    }
+    .section_parag {
+      margin-left: 100px;
+    }
+
+    .pink_title {
+      margin-left: 100px;
+    }
+  }
+
+  .approdable_packages {
+    .section_title {
+      margin-left: 100px;
+    }
+    .section_parag {
+      margin-left: 100px;
+    }
+
+    .pink_title {
+      margin-left: 100px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .practice_advice {
+    background-color: #ffffff;
+  }
+}
